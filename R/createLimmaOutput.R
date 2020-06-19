@@ -1,3 +1,25 @@
+#' using limma package to do differential expression analysis
+#'
+#' using limma package to do differential expression analysis
+#'
+#' @param GSE a GSE id or a data.frame. if a data.frame, first column must be gene symbol.
+#' @param columnGSE which column should be used to do differential expression analysis.
+#' @param GPL the matched GPL platform of GSE id.
+#' @param method max or mean.
+#' @param columnGPL which column to convert probe id.
+#' @param group if GSE is a data.frame, a group vector should be provided. Otherwise omit.
+#' @param sepTitle separator of the title.
+#' @param groupIndex which vector should be taken after the title was split.
+#' @param logFC log fold change.
+#' @param pvalue cutoff to screen result.
+#' @return generate a differential expression analysis results.
+#' @export
+#' @keywords limmaResult
+#' @examples
+#' createLimmaOutput(GSE = fpkm, group = group)
+#' createLimmaOutput(GSE="GSE19136",columnGSE = c(1,2,4,5,7,8,10,11),GPL='GPL570', method="max", columnGPL=c(1,11),logFC=1.5,pvalue=0.05)
+
+
 createLimmaOutput <- function(GSE="GSE65858", columnGSE=1:ncol(eset), GPL='GPL10558', method="max", columnGPL=NULL, group=NULL, sepTitle="_", groupIndex=5, logFC=1.5, pvalue=0.05){
   if (is.data.frame(GSE) | is.matrix(GSE)){
     if (method=="mean"){
