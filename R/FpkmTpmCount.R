@@ -1,3 +1,18 @@
+#' TPM FPKM COUNT conversion
+#'
+#' TPM FPKM COUNT conversion
+#'
+#' @param counts raw count of RNAseq data.
+#' @param fpkm FPKM.
+#' @return generate a expression matrix (TPM or FPKM).
+#' @export
+#' @keywords dataConversion
+#' @examples
+#' tpm <- countToTpm(counts = counts)
+#' fpkm <- countToFpkm(counts = counts)
+#' tpm <- fpkmToTpm(counts = fpkm)
+
+
 countToTpm <- function(counts, effLen=5)
 {
     rate <- log(counts) - log(effLen)
