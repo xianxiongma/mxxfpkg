@@ -1012,7 +1012,7 @@ CreateGeneTable <- function(
 ##
 ## Called by GetGenesHTML().
 
-  ArrayToolsPath <- path.package("classpredict")
+  ArrayToolsPath <- path.package("mxxfpkg")
 
   #Set default path and filenames if user did not specify any.
   if (FolderPath=="") FolderPath <- paste(ProjectPath, "/Output/Plugins", sep="")
@@ -1388,7 +1388,7 @@ CreateAnnotations <- function(GeneIds, PathName="", AnnotationsFileName="", Call
                               ProjectPath = "") {
   # Called by CreateGeneTable() and CreateMasterAnnotationsTable()
 
-  ArrayToolsPath <- path.package("classpredict")
+  ArrayToolsPath <- path.package("mxxfpkg")
 
   PrimaryIdFile <- paste(ProjectPath, "/Annotations/PrimaryId.txt", sep="")
   if (file.access(PrimaryIdFile) < 0) return(NULL)
