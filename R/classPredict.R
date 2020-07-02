@@ -189,7 +189,7 @@ classPredict <- function(exprTrain,
 
 
   # ArrayToolsVersion <- '4.6.0 - Beta (July 2017)'
-  ArrayToolsPath <- path.package("classpredict")  # ArrayToolsPath <-'C:/Program Files (x86)/ArrayTools'
+  ArrayToolsPath <- path.package("mxxfpkg")  # ArrayToolsPath <-'C:/Program Files (x86)/ArrayTools'
   # eventually we can remove this parameter in all R code
 
   # projectPath <- 'C:/Program Files (x86)/ArrayTools/Sample datasets/Pomeroy/Pomeroy -Project5'
