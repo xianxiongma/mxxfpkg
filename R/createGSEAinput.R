@@ -23,7 +23,6 @@ createGSEAinputs <- function(prefix = "GSE1009", exprSet = example_exprSet, grou
     gct_out <- cbind(symbol = rownames(exprSet), description = "na", exprSet)
     write.table(gct_out, gct_file, append = T, quote = F, row.names = F, sep = "\t")
     
-    
     cls_file = paste0(prefix, ".cls")
     sink(cls_file)
     cat(paste0(length(group_list), " ", length(unique(group_list)), " 1\n"))
