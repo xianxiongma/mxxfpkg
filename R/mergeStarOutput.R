@@ -27,3 +27,16 @@ mergeStarOutput <- function(pattern =  ".*count.tab",header = F,sep = "\t",strin
   rownames(mat) <- matrix[,1]
   return(mat)
 }
+
+# single cell
+# mergeStarOutput <- function(pattern =  ".*count.tab",header = F,sep = "\t",stringsAsFactors = F,namesSep="\\.",colSelect=c(1,2),nameSelect=1){
+  # nameList <- list.files(pattern =  pattern)
+  # matrix <- as.data.frame(data.table::fread(nameList[1],header = T))[,colSelect]
+  # for (i in 2:length(nameList)){
+    # matrix <- dplyr::inner_join(matrix,as.data.frame(data.table::fread(nameList[i],header = T))[,colSelect],by=colnames(matrix)[1])
+  # }
+  # colnames(matrix)[2:ncol(matrix)] <- apply(expand.grid(1:(length(colSelect)-1),unlist(lapply(nameList,function(nameList) strsplit(as.character(nameList),namesSep)[[1]][nameSelect]))), 1, paste, collapse=".")
+  # mat=as.matrix(matrix[2:ncol(matrix)])
+  # rownames(mat) <- matrix[,1]
+  # return(mat)
+# }
