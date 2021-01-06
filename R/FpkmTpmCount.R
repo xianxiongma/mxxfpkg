@@ -30,3 +30,8 @@ fpkmToTpm <- function(fpkm)
 {
     exp(log(fpkm) - log(sum(fpkm)) + log(1e6))
 }
+
+ff <- function(x)
+{ 
+  x[1:5,1:5]
+}
