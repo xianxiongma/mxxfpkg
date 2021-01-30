@@ -21,7 +21,7 @@ TimeMax<-max(IndiceTimes)
 verif <- function(x)
 {
 ref.study <- sort(time[study==x])
-ref.data  <- IndiceTimes[IndiceTimes<=max(ref.study)]
+ref.data  <- IndiceTimes[IndiceTimes <= max(ref.study)]
 return(1*(sum(ref.study!=ref.data)==0))
 }
 
